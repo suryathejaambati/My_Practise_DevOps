@@ -1,0 +1,118 @@
+[node:vars]
+ansible_python_interpreter="/usr/bin/python"
+ansible_user=ec2-user
+ansible_ssh_private_key_file=firstproject.pem
+
+[unode:vars]
+ansible_python_interpreter="/usr/bin/python3"
+ansible_user=ubuntu
+ansible_ssh_private_key_file=firstproject.pem
+
+[server]
+172.31.39.159
+[node]
+172.31.44.149
+172.31.47.79
+[unode]
+172.31.39.74
+
+---------------------------------------------------------------
+
+- hosts: node
+  tasks:
+    - name: This is first yaml touch file
+      file:
+        path: "/home/ec2-user/sunday.txt"
+        state: touch
+-----------------------------------------------------------------------
+
+- hosts: node
+  tasks:
+    - name: This is first yaml touch file
+      ping
+	  
+----------------------------------------------------------------------
+
+- hosts: node
+  become: true
+  tasks:
+    - name: install git
+      yum:
+        name: git
+        state: present
+      tags:
+       - install
+    - name: uninstall git
+      yum:
+        name: git
+        state: absent
+      tags:
+       - uninstall
+
+-------------------------------------------------------------------------
+
+- hosts: unode
+  become: true
+  tasks:
+    - name: install httpd
+      yum:
+        name: httpd
+        state: present
+      tags:
+       - install
+    - name: install httpd
+      yum:
+        name: httpd
+        state: absent
+      tags:
+       - uninstall
+
+---------------------------------------------------------------------------------------------
+
+- hosts: node
+  become: true
+  tasks:
+    - name: install maven
+       cmd:
+          wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+          sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+          yum install -y apache-maven
+
+------------------------------------------------------------------------------------------------
+
+- hosts: node
+  become: true
+  tasks:
+  - name: Download Maven
+    get_url: url=http://apachemirror.wuchna.com/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz dest=/opt/apache-maven-3.5.3-bin.tar.gz
+  - name: Extract Maven
+    command: tar xvf /opt/apache-maven-3.5.3-bin.tar.gz -C /opt
+  - name: Move to a smaller directory
+    command: mv /opt/apache-maven-3.6.3 /opt/maven
+  - name: Update Profile
+    copy: content="export M2_HOME=/opt/maven \n" dest=/etc/profile.d/maven.sh
+  # lineinfile is used to add additional or append lines to existing files.
+  - lineinfile:
+     path: /etc/profile.d/maven.sh
+     line: 'export PATH=${M2_HOME}/bin:${PATH}'
+  - name: Source profile
+    shell: source /etc/profile.d/maven.sh
+
+-------------------------------------------------------------------------------------------------------------
+---
+-
+  become: true
+  hosts: node
+  tasks:
+    -
+      command: "wget --no-check-certificate --no-cookies --header 'Cookie: oraclelicense=accept-securebackup-cookie' {{download_url}} "
+      name: "Download JDK 8 RPM file"
+    -
+      command: "rpm -ivh jdk-8u141-linux-x64.rpm"
+      name: "Install JDK 8"
+  vars:
+    download_url: "http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.rpm"
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+

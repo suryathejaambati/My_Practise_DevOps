@@ -1,0 +1,292 @@
+Linux Commands Practise :
+
+ssh username@ipaddress password
+
+ssh -i "mykey.pem" username@ipaddress 
+
+ls : show the all folders
+ls -a : show the hidden files also with current folders
+ll : long list ( give the folders with size, group name, user name)
+ls -ltr : display all the files with order ( Sort)
+tail - display last lines
+| : Output of the previous command as input for current command (ls -lr | grep "prod.log")
+grep : it's filtering from the data
+cp : copy
+cp -r : copy with recursively
+cd : Change directory
+cd /surya : go to surya folder
+cd ..  : One step back
+cd ../../ : Two steps back
+cd ~ or cd  : go to home directory
+cd / : go to root directory
+mkdir banagalore: Create a folder with bangalore
+How to create multiple folders at a time..?
+mkdir bang/mara/Jms : it's wrong command
+mkdir -p bang/mara/jms : this is correct
+
+pwd : provide current directory path
+
+What is command for create a file..?
+nano ( there is no insert mode, esc mode to write the data )
+vi
+touch
+
+How to create zero size file using  command..?
+touch file.txt
+
+cat file.txt : provide content of the data for file
+cat file.txt | grep devops : Display all words devops  ( Only Small letters)
+cat file.txt | grep -i devops : Display all devops wors ( provid small& capital letters  devops words)
+
+yum : 
+apt install git : for install the softwares in Ubuntu
+apt-get is the same as for above command
+
+ssh : for connectivity
+du : disk utilization for particular file
+du -kh :
+df -kh : provide disk free space for entire file system
+free -kh : check memory size
+top : to check CPU utilization
+uptime : to check when on wards system is running and check load average  ( 1 5 15)
+
+What are all the commands to check the linux functionality..?
+ssh
+uptime
+du -kh df -kh
+free
+top
+
+How to check the internet connectiviy is working or not..?
+ping google.com
+
+nestat -nplt : to check the ports listening or not
+telnet domainname portnumber : check the website/system is connecting or not
+tail -10 file.text : Display last 10lines
+head -10 file.txt  : display first 10lines
+man cp : provide cp command info
+which java : find out java path
+w  : who are online in system
+env : display all environment variables in the system
+echo $home : disply home path
+mv sample.txt myfile.txt : move the data
+
+service jenkins status: check the jenkins service status
+systemctl status httpd/jenkins/apache : check the status of the services
+systemctl start httpd : start the httpd service
+
+exit :
+date :
+diff
+ps -ef : to check what all the process are running on system
+wget  : to download any software using this command in linux system
+curl : to download any software using this command in linux system
+uniq :
+wc : count the words
+cat my file.text | grep devops | wc
+cat my file.text | grep devops | wc -l
+
+sed : to replace the data 
+awk : its tool
+
+ssh-keygen
+ssh-copy-id : for password less authentication
+
+______________________________________________________________________________________________________
+
+Day 2 :
+
+ifconfig : to get the ip address
+I want to get 02 inet ipaddress only from ifconfig output how..?
+ifconfig | grep inet
+ifconfig | grep -iw inet
+ifconfig | grep -iw inet | awk '{print $2}'  (f : field seperator) : Use this command to get the ipaddress only from ifconfg output
+ex  for field seperator : ifconfig | grep -iw inet | awk -f '-' print '{print $2}'
+
+http Methods : get, put , post, delete
+
+I want to get the which ip address using more data using from log file..?
+
+cat access.log | grep -i "get" 
+
+cat access.log | grep -i "get" | awk '{print $1}'  
+
+cat access.log | grep -i "get" | awk '{print $1}' | wc -l
+
+cat access.log | grep -i "get" | awk '{print $1}' | uniq | wc -l
+
+cat access.log | grep -i "get" | awk '{print $1}' | uniq -c : to get the value of  ipaddress
+
+cat access.log | grep -i "get" | awk '{print $1}' | uniq -c | sort
+
+cat access.log | grep -i "get" | awk '{print $1}' | sort -r | uniq -c | 
+
+cat access.log | grep -i "get" | awk '{print $1}' | sort -r | uniq -c | sort
+
+cat access.log | grep -i "get" | awk '{print $1,$6}' | sort -r | uniq -c | sort
+
+cat access.log | grep -i "get" | awk -f '-' '{print $1,$3}' |
+
+cat access.log | grep -i "get" | awk -f '-' '{print $1,$3}' | awk  '{print $1,$4}'
+
+cat access.log | grep -i "get" | awk -f '-' '{print $1,$3}' | awk  '{print $1,$4}' | uniq c
+
+cat access.log | grep -i "get" | awk -f '-' '{print $1,$3}' | awk  '{print $1,$4}' | uniq -c | sort
+
+cat access.log | grep -i "get" | awk -f '-' '{print $1,$3}' | awk  '{print $1,$4}' | sort -r | uniq -c | sort
+
+cat access.log | grep -i "post" | awk -f '-' '{print $1,$3}' | awk  '{print $1,$4}' | sort -r | uniq -c | sort
+
+http response codes
+
+404 : file not found
+500 : server not found
+200 : success
+400 : Bad request
+100 : Continue
+
+http2 is latest protocal 
+
+
+_____________________________________________________________________________________________________________________
+
+Day 3 :
+
+Cronjob : It is a scheduler ( Scheduler a particular job with out any manual process ex : backup jobs, Deployment jobs)
+
+crontab -l : Display the crontab jobs
+crontab -e : to edit the crontab jobs ( if not available can install the new crontab)
+
+Crontab syntax : ( 5 stars)
+
+*  *  *  *  *
+
+Minute hours dayofMonth Monthoftheyear dayoftheweek
+(0-59) (0-23) (1-31)    (1-12)         (0-7)
+
+M H D M W
+
+0 0 * * * /home/surya/script/backup.sh > 2&>1 backup.log
+
+crontab.guru : to check the syntax
+
+0 1 1 * * 
+0 0 1,10,13,15,25 * * 
+
+systemctl status crontab : to check the status of crontab
+sudo yum install crontab : To install the crontab
+
+sudo systemctl status crond : check the service of cronjobs
+sudo systemctl start crond
+sudo systemctl status crond
+sudo service crond status
+
+sudo service crond status : run the service go to systemctl only
+systemctl is the library and developed by linux and check the services available or not
+
+cd /usr/bin : to install the all softwares for commands
+
+*/1 * * * * : every minute to run the job
+*/5 * * * * : Every 05mins to run the job
+
+ps -ef | grep -i java : to check the java service is running or not
+
+ps -ef : to chek any process is running or not
+
+sudo npm : nodejs
+
+sudo yum install git : to install the softwares in centos ( for ubuntu using apt)
+systemctl status git 
+sudo systemctl status git : 
+git --version
+
+sudo yum install nginx : to install nginx software
+sudo yum search nginx
+sudo yum install httpd
+sudo systemctl status httpd
+sudo systemctl start httpd
+sudo systemctl status httpd
+
+ps -ef | grep httpd
+netstat -nplt | grep -i 80
+
+
+_________________________________________________________________________________________________________________
+
+Day 4 :
+
+symbolic link and softlink both are same
+inode..?..> index node ( it is unixbased metadata base structure)
+softlink..?
+hardlink..?
+
+when we excute below comand display the inode value..?
+ ls -ltri
+
+softlink..?
+softlink point out the file
+ln -s this is command for soft link
+ln -s file2.txt soft-file2.txt
+for both files inode value is different
+if you modifiy any soft-file2.txt automatically reflects to file2.txt
+if remove the file2.txt, soft-file2.txt is no more
+softlink file represents start with "lr"
+
+hard link..?
+hardlink point out to the inode value a
+ln this is command for hard link
+ln file1.txt hard-file1.txt
+ls -ltri ...> after excute file1 and hard-file1.txt inode value are same
+if you modifiy any hard-file1.txt automatically reflects to file1.txt
+if remove the file1.txt. no effect to the hard-file1.txt
+ 
+python2 --version
+
+when install the softwares point out to particular softlink only
+
+SED : Replace the particular sting in  entire file
+
+sed '/s/unix/linux/' sample.txt  : Once excute this command unix word replace woth linux in file
+sed '/s/unix/linux/g' sample.txt  : Once excute this command unix word replace woth linux in entire file
+
+sed -i '/s/unix/linux/g' sample.txt : By using i it's replace word and save the file 
+
+
+Vi editor shortcus :
+
+shift H  : go to first line
+Shift l : go to last line
+DD : delete the particular line
+u : undo the things
+shift w : move for one word to onw word
+shift D : remove the entire word
+yy : copy the file
+p : past the file
+shit f : forward
+shift b : backward
+shift a : it will come end of the line and come insert mode
+%s/foo/bar/g  : This is replace the 
+:se nu : to set the number
+:9 : go the for particular number
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

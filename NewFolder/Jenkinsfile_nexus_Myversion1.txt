@@ -1,0 +1,87 @@
+pipeline{
+    agent any
+		tools{
+			maven "Maven3"
+		}
+		environment{
+		NEXUS_VERSION = "nexus3"
+		NEXUS_PROTOCOL = "http"
+		NEXUS_URL = "ec2-3-81-118-211.compute-1.amazonaws.com:8081"
+		NEXUS_REPOSITORY = "pipeline-nexus"
+		NEXUS_CREDENTIAL_ID = "nexus_credentials"
+		}
+		stages{
+			stage("get SCM"){
+				steps{
+					script{
+						git credentialsId: 'GITHUB', url: 'https://github.com/suryathejaambati/spring3-mvc-maven-xml-hello-world.git'
+					}
+				}
+			}
+			stage("Build the code"){
+				steps{
+					script{
+						sh "mvn package"
+					}
+				}
+			}
+			stage("Artifact the code"){
+				steps{
+					script{
+						archiveArtifacts "target/*.war"
+					}
+				}
+			}
+			stage("Publish the nexus"){
+				steps{
+					script{
+						pom = readMavenPom file: "pom.xml";
+						filesByGlob = findFiles(glob: "target/*.${pom.packaging}");
+						echo "${filesByGlob[0].name} ${filesByGlob[0].path} ${filesByGlob[0].directory} ${filesByGlob[0].length} ${filesByGlob[0].lastModified}";
+						artifactPath = filesByGlob[0].path;
+						artifactExists = fileExists artifactPath;
+						if(artifactExists) {
+							echo "*** File: ${artifactPath}, group: ${pom.groupId}, packaging: ${pom.packaging}, version: ${pom.version}";
+							nexusArtifactUploader(
+								nexusVersion: NEXUS_VERSION,
+								protocol: NEXUS_PROTOCOL,
+								nexusUrl: NEXUS_URL,
+								groupId: pom.groupId,
+								version: '${BUILD_NUMBER}',
+								repository: NEXUS_REPOSITORY,
+								credentialsId: NEXUS_CREDENTIAL_ID,
+								artifacts: [
+									[artifactId: pom.artifactId,classifier:'',file:artifactPath,type:pom.packaging],
+									[artifactId: pom.artifactId,classifier:'',file:"pom.xml",type:"pom"]
+								]	
+							);
+						} else{
+								error"*** File: ${artifactPath}, could not be found"
+							}
+					}
+				}
+			}
+		}
+	}					
+				
+				
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+			
+	
+

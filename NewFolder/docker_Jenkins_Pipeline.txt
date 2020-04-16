@@ -1,0 +1,40 @@
+pipeline{
+    environment{
+        registry= "surya91/jenkins_pipeline"
+        registryCredential= 'dockerhub'
+        dockerImage= ''
+    }
+    agent any
+    stages {
+      stage ('get scm'){
+        steps {
+          git 'https://github.com/suryathejaambati/web_login_automation.git'
+        }
+      }        
+      stage ('Building Image') {
+        steps {
+          script {
+            dockerImage = docker.build registry + ":$BUILD_NUMBER"
+          }
+        }
+      }
+      stage('push image') {
+        steps {
+          script {
+            docker.withRegistry( '', registryCredential ) {
+              dockerImage.push()
+            }
+          }
+        }
+      } 
+      stage('Remove old image') {
+        steps {
+          sh " docker rmi $registry:$BUILD_NUMBER "
+        }
+      }
+    }
+}    
+    
+
+  
+ 

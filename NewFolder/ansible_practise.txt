@@ -1,0 +1,75 @@
+    1  cd /home/ansadmin/
+    2  ls -lart
+    3  cd nonprod/
+    4  ls -lart
+    5  cat inventory
+    6  ansible all -m copy "src=./host dest=/home/ansadmin/Practise/"
+    7  ansible all -m copy -a "src=./host dest=/home/ansadmin/Practise/"
+    8  ls -lart
+    9  pwd
+   10  ansible all -m copy -a "src=./host dest=/home/ansadmin/Practise/"
+   11  ansible all -m file -a "path=/home/ansadmin/Practise/hello.txt state=touch"
+   12  ansible all -m file -a "content=how are you dest=/home/ansadmin/Practise/hello.txt"
+   13  ansible all -m copy -a "content=how are you dest=/home/ansadmin/Practise/hello.txt"
+   14  ansible all -m file -a "content='how are you' dest=/home/ansadmin/Practise/hello.txt"
+   15  ansible all -m file -a "content='how are you' dest=/home/ansadmin/Practise/hello.txt backup=yes"
+   16  ansible all -m file -a "path=/home/ansadmin/Practise/hello.txt state=touch mode=0777"
+   17  ansible all -m file -a "content='how are you' dest=/home/ansadmin/Practise/hello.txt backup=yes"
+   18  ansible all -m file -a "content='I am fine' dest=/home/ansadmin/Practise/hello.txt"
+   19  ansible all -m copy -a "src=./host dest=/home/ansadmin/Practise/"
+   20  ls -lart
+   21  chmod 777 hosts
+   22  ls -lart
+   23  ansible all -m copy -a "src=./host dest=/home/ansadmin/Practise/"
+   24  ansible all -m copy -a "src=./host dest=/home/ansadmin/Practise/" -vvv
+   25  ls -lart
+   26  vi test
+   27  ansible all -m copy -a "src=./test dest=/home/ansadmin/Practise/"
+   28  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./demo"
+   29  ls -lart
+   30  cd demo/
+   31  ls -lart
+   32  tree
+   33  yum install tree
+   34  tree
+   35  cd 172.31.44.189
+   36  ls -lart
+   37  cd home/
+   38  cd ansadmin/
+   39  ls -lart
+   40  cd Practise/
+   41  ls -lart
+   42  pwd
+   43  cd ../../../
+   44  cd ../
+   45  cd ../
+   46  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./demo flat=yes"
+   47  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo flat=yes"
+   48  ls -lart
+   49  cd newdemo
+   50  cat newdemo
+   51  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo/{{inventory_host}}_demo.txt flat=yes"
+   52  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo/{{Inventory_host}}_demo.txt flat=yes"
+   53  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo/{{inventory_host}}_demo.txt flat=yes"
+   54  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo/{{hostname}}_demo.txt flat=yes"
+   55  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo/{{ inventory_host }}_demo.txt flat=yes"
+   56  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo/{{ inventory_hostname }}_demo.txt flat=yes"
+   57  ls -lart
+   58  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo/{{ inventory_hostname }}_hello.txt flat=yes"
+   59  ansible all -m fetch -a "src=/home/ansadmin/Practise/hello.txt dest=./newdemo1/{{ inventory_hostname }}_hello.txt flat=yes"
+   60  ls -lart
+   61  cd newdemo1/
+   62  ls -lart
+   63  cat 172.31.89.167_hello.txt
+   64  ansible all -m copy -a "src=./test dest=/home/ansadmin/Practise/invetory"
+   65  ansible all -m copy -a "src=./test dest=/home/ansadmin/Practise/inventory"
+   66  ls -lart
+   67  cd ../../
+   68  pwd
+   69  cd nonprod/
+   70  ls -lart
+   71  ansible all -m copy -a "src=./test dest=/home/ansadmin/Practise/inventory"
+   72  ansible all -m copy -a "content='Filechanges needs to be done' dest=/home/ansadmin/Practise/inventory"
+   73  ansible all -m copy -a "content='Filechanges needs to be done \n' dest=/home/ansadmin/Practise/inventory"
+   74  ansible all -m copy -a "content='Filechanges needs to be done asap \n' dest=/home/ansadmin/Practise/inventory backup=yes"
+   75  history

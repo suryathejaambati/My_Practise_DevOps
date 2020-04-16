@@ -1,0 +1,1105 @@
+ sudo yum update -y
+    2  sudo yum install docker -y
+    3  sudo service docker status
+    4  sudo service docker restart
+    5  sudo service docker status
+    6  docker --version
+    7  docker version
+    8  docker images
+    9  docker info
+   10  sudo usermod -a -G docker ec2-user
+   11  exit
+   12  docker info
+   13  docker images
+   14  docker version
+   15  docker --version
+   16  docker search clock
+   17  docker pull jpetazzo/clock
+   18  docker image
+   19  docker images
+   20  docker pull ubuntu
+   21  docker images
+   22  Sudo service docker enable
+   23  sudo service docker enable
+   24  sudo systemctl docker enable
+   25  docker pull ubuntu:18.04
+   26  docker images
+   27  docker ps
+   28  docker ps -a
+   29  docker run jpetazzo/clock
+   30  docker ps
+   31  docker ps -a
+   32  docker run -d jpetazzo/clock
+   33  docker ps
+   34  docker ps -a
+   35  docker stop dc9c3e94578c
+   36  docker ps
+   37  docker ps -a
+   38  docker run -d --name myclock jpetazzo/clock
+   39  docker ps
+   40  docker ps | grep clock
+   41  docker ps | grep jpeta
+   42  docker ps | grep ubutnu
+   43  docker ps | grep ubuntu
+   44  docker ps
+   45  docker stop bb1756cc075e
+   46  docker ps -al
+   47  docker ps -aq
+   48  docker ps -q
+   49  docker run jpetazzo/clock
+   50  docker run -d jpetazzo/clock
+   51  docker ps -aq
+   52  docker pd -q
+   53  docker ps -q
+   54  docker ps -aq
+   55  docker stop 1c0cc2c048e0
+   56  docker run -it --name myubuntu ubuntu
+   57  docker ps -l
+   58  docker commit -m "Figlet_ubuntu" b9fc0c05dba1 Figlet_ubuntu
+   59  docker commit -m "figlet_ubuntu" b9fc0c05dba1 Figlet_ubuntu
+   60  docker commit -m "figlet_ubuntu" b9fc0c05dba1 figlet_ubuntu
+   61  docker ps -l
+   62  docker images
+   63  docker run -it figlet_ubuntu
+   64  docker ps -l
+   65  docker ps
+   66  docker stop b9fc0c05dba1
+   67  docker ps
+   68  docker ps -a
+   69  docker rm b9fc0c05dba1
+   70  docker images
+   71  docker ps
+   72  docker ps -l
+   73  docker ps -a
+   74  docker rm -f f1fa98b5f6d4
+   75  docker ps
+   76  docker ps -a
+   77  ls -lart
+   78  pwd
+   79  docker images
+   80  docke run -it --name myubuntu ubuntu
+   81  docker run -it --name myubuntu ubuntu
+   82  docker ps
+   83  docker stop 1520a77b54e0
+   84  docker start 1520a77b54e0
+   85  docker run 1520a77b54e0
+   86  docker ps
+   87  docker run -it myubuntu
+   88  docker run -it ubuntu
+   89  docker ps
+   90  docker rm -f 1233a32802cb 1520a77b54e0
+   91  docker ps -l
+   92  docker ps -all
+   93  docker rm 1c0cc2c048e0
+   94  docker ps -all
+   95  docker ps
+   96  dokcer rm -f 8c9ca0879263
+   97  docker rm -f 8c9ca0879263
+   98  docker ps
+   99  docker ps -l
+  100  docker logs bb1756cc075ebb1756cc075e
+  101  docker logs bb1756cc075e
+  102  docker logs -f bb1756cc075e
+  103  docker logs -f --tail 1 bb1756cc075e
+  104  docker logs -f --tail 20 bb1756cc075e
+  105  docker images
+  106  docker run -it ubuntu
+  107  docker ps
+  108  docker stop d780c1d73e55
+  109  docker start d780c1d73e55
+  110  docker exec -it d780c1d73e55 bash
+  111  docker ps
+  112  docker stop d780c1d73e55
+  113  docker ps
+  114  docker ps -a
+  115  docker rm -f d780c1d73e55 bb1756cc075e dc9c3e94578c abbaa3bf037c
+  116  docker ps -all
+  117  docker images
+  118  docker ps
+  119  docker ps -aq
+  120  history
+  121  docker ps
+  122  docker run -d -p 8282:80 --name web3 tutum/hello-world
+  123  docker ps
+  124  docker stop af56e58908e0
+  125  docker stop 5db7348ed445
+  126  docker ps -q
+  127  docker ps -aq
+  128  docker ps -all
+  129  pwd
+  130  ls -lart
+  131  cd Applications
+  132  mkdir Javaapp
+  133  cd Javaapp
+  134  vi HelloWorld.java
+  135  ls -lart
+  136  vi Dockerfile
+  137  ls -lart
+  138  cat Dockerfile
+  139  docker build -t javaapp
+  140  docker build -t javaapp .
+  141  docker images
+  142  ls -lart
+  143  docker run -it --name myapp javaapp
+  144  docker ps
+  145  docker ps -a
+  146  vi HelloWorld.java
+  147  docker build -t javaapp .
+  148  docker images
+  149  docker run -it --name myapp2 javaapp
+  150  docker login
+  151  docker push javaapp
+  152  docker tag javaapp surya91/javaapp
+  153  ls -lart
+  154  docker images
+  155  docker push surya91/javaapp
+  156  docker tag javaapp surya91/javaapp:v1
+  157  docker images
+  158  docker push surya91/javaapp:v1
+  159  ls -lart
+  160  vi Dockerfile
+  161  docker build -t javaapp .
+  162  vi Dockerfile
+  163  docker build -t javaapp .
+  164  docker images
+  165  dokcer rmi -f 45b46fb1c2f8 5414629f5089 3c4d329b7f08
+  166  docker rmi -f 45b46fb1c2f8 5414629f5089 3c4d329b7f08
+  167  docker images
+  168  docker ps
+  169  docker ps -aq
+  170  docker ps -q
+  171  docker ps -all
+  172  history
+ 173  ls -lart
+  174  docker images
+  175  docker --version
+  176  sudo service docker status
+  177  sudo service docker start
+  178  sudo service docker status
+  179  docker images
+  180  sudo service docker enable
+  181  docker images
+  182  docker ps
+  183  docker ps -a
+  184  docker ps -l
+  185  docker ps -cq
+  186  docker ps -aq
+  187  docekr ps -q
+  188  docker ps -q
+  189  docker images
+  190  docker push figlet_ubuntu
+  191  docker login
+  192  docker push figlet_ubuntu
+  193  docker push surya91\figlet_ubuntu
+  194  docker push surya91/figlet_ubuntu
+  195  docker tag figlet_ubuntu surya91\figlet_ubuntu
+  196  docker images
+  197  docker push surya91figlet_ubuntu
+  198  docker login
+  199  docker images
+  200  docker rmi 12f9d08fde7b
+  201  dokcer ps
+  202  docker ps
+  203  docker ps -a
+  204  docker rmi -f 12f9d08fde7b
+  205  docker images
+  206  docker pull hello-world
+  207  docker images
+  208  dokcer run -it --name web hello-world
+  209  docker run -it --name web hello-world
+  210  docker ps
+  211  dockper ps -a
+  212  docker ps -a
+  213  docker logs 291479e8b428
+  214  docker pull tutum\hello-world
+  215  docker pull tutum/hello-world
+  216  docker images
+  217  docker run -it --name web tutum/hello-world
+  218  docker run -it --name web1 tutum/hello-world
+  219  docker run -d -p 80 --name web1 tutum/hello-world
+  220  docker run -d -p 80 --name web2 tutum/hello-world
+  221  docker ps
+  222  docker logs 5db7348ed445
+  223  ls -lart
+  224  mkdir simpleApp
+  225  cd simpleApp/
+  226  pwd
+  227  ls -lart
+  228  curl  https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war -o sample.war
+  229  ls -lart
+  230  chmod 777 sample.war
+  231  vi Dockerfile
+  232  docker build -t simpleApp .
+  233  docker build --tag simpleapp .
+  234  sudo service status docker
+  235  sudo service docker status
+  236  sudo service docker start
+  237  sudo service docker status
+  238  docker build --tag simpleapp .
+  239  docker images
+  240  docker run -it -p 8080 --name simple simpleapp
+  241  docker ps
+  242  docker ps -a
+  243  docker run -d -p 8080 --name simple simpleapp
+  244  docker run -d -p 8080 --name simple1 simpleapp
+  245  docker ps
+  246  docker run -d -p 8282:8080 --name simple2 simpleapp
+  247  docker ps
+  248  docker logs 39974ab4197d
+  249  docker ps
+  250  docker stop dc4b10ae73bc 39974ab4197d
+  251  docker ps -aq
+  252  docker ps -q
+  253  ls -lart
+  254  cd simpleApp/
+  255  ls -lart
+  256  vi Dockerfile
+  257  docker build -t simpleapp .
+  258  sudo service docker status
+  259  sudo service docker start
+  260  sudo service docker status
+  261  docker build -t simpleapp .
+  262  docker run it --rm -p 8888:8080 tomcat:9.0
+  263  docker run -it --rm -p 8888:8080 tomcat:9.0
+  264  docker ps
+  265  docker run -b -p 8888:8081 --name text simpleapp
+  266  docker run -d -p 8888:8081 --name text simpleapp
+  267  docekr ps
+  268  docker ps
+  269  vi Dockerfile
+  270  docker images
+  271  docker build -t sampleapp .
+  272  docker run -p 8080:8080 -d --name tomcat  <your-username>/tomcat:latest
+  273  docker run -d -p 8080:8080 --name tomcat simpleapp
+  274  docker ps
+  275  docker run -d -p 8888:8080 --name tomcat simpleapp
+  276  docker run -d -p 8888:8080 --name tomcat1 simpleapp
+  277  docker ps
+  278  docket stop aa1a334ecaef
+  279  docker stop aa1a334ecaef
+  280  docker ps
+  281  docker run -d -p 8888:8080 --name tomcat1 simpleapp
+  282  docker run -d -p 8888:8080 --name tomcat2 simpleapp
+  283  docker ps
+  284  docker lpgs
+  285  docker logs a446a368419d
+  286  ps -ef } grep 8081
+  287  ps -ef | grep 8081
+  288  ps -ef | grep 8080
+  289  kill -9 4638 4963
+  290  ps -ef | grep 8080
+  291  docer ps
+  292  docker ps
+  293  docker stop a446a368419d fb1fc0abd498
+  294  docker ps -cq
+  295  docker ps -aq
+  296  docker ps -q
+  297  docker run -d -p 8888:8080 --name tomcat3 simpleapp
+  298  docker images
+  299  ls -lart
+  300  cd ../
+  301  ls -lart
+
+
+cd ec2-user/
+  303  docker run -it --rm -v /mydata2:/mydata2 --name second ubuntu
+  304  docker run -it --rm -v /mydata2:/mydata2/ --name second ubuntu
+  305  ls -lart
+  306  docker volume ls
+  307  exit
+  308  sudo -t
+  309  sudo -i
+  310  docker run -it --rm -v /mydata2:/mydata2/ --name second ubuntu
+  311  sudo -i
+  312  sudo service docker status
+  313  sudo service docker start
+  314  sudo service docker status
+  315  docker images
+  316  docker ps -aq
+  317  docker rm $(docker ps -aq)
+  318  dokcer ps
+  319  docker ps -aq
+  320  docker ps -1
+  321  docker ps -q
+  322  docker volume create --name mydata
+  323  docker volume inspect data
+  324  docker volume inspect mydata
+  325  cd "/var/lib/docker/volumes/mydata/_data"
+  326  sudo i
+  327  sudo -i
+  328  docker images
+  329  docker run -it --rm -v mydata:/mydata --name first ubuntu
+  330  docker ps
+  331  docker ps -a
+  332  sudo -i
+  333  docker run -it --rm -v mydata:/mydata --name first ubuntu
+  334  docker run -it --rm -v /mydata1:/mydata1 --name first ubuntu
+  335  docker ps
+  336  docker ps -a
+  337  docker ps -aq
+  338  docker volume inspect mydata1
+  339  history
+  340  ls -lart
+  341  cd .docker/
+  342  ls -lart
+  343  cd ../
+  344  docker volume inspect mydata
+  345  docker volume inspect mydata1
+  346  docker volume inspect /mydata1
+  347  docker volumes -v
+  348  docker volumes -l
+  349  docker volume ls
+  350  docker run -it --rm -v /mydata1:/mydata1/ --name first ubuntu
+  351  docker volume inspect mydata1
+  352  docker run -it --rm -v mydata3:/var --name four ubuntu ls /var/
+  353  docker run -it --rm -v mydata3:/var --name five ubuntu ls /var/
+  354  docker run -it --rm -v mydata4:mydat4 --name six ubuntu
+  355  docker run -it --rm -v mydata4:mydata4 --name six ubuntu
+  356  docker run -it --rm -v mydata4:/mydata4 --name six ubuntu
+  357  docker run -it --rm -volumes-from six --name seven ubuntu
+  358  docker run -it -volumes-from six --name seven ubuntu
+  359  docker run -it -v mydata5:/mydata5 --name seven ubuntu
+  360  docker run -it -volumes-from seven --name eigth ubuntu
+  361  docker login
+  362  history
+  363  docker ps -aq
+  364  docker rm $(docker ps -aq)
+  365  docker stop eacaf6862be4 e55381d19c07
+  366  docker stop eacaf6862be4
+  367  docker stop e55381d19c07
+  368  docker ps -aq
+  369  docker images
+  370  docker volume -ls
+  371  docker volume -l
+  372  docker volume ls
+  373  docker volume rm mydata3 mydata4 mydata5
+  374  docker volume ls
+  375  docker volume inspect mydata
+  376  history
+ 377  docker run -it --rm -v mydata3:/var --name four ubuntu
+  378  sudo service docker start
+  379  docker run -it --rm -v mydata3:/var --name four ubuntu
+  380  ls -lart
+  381  sudo service docker status
+  382  sudo service docker restart
+  383  cd simpleApp
+  384  ls -lart
+  385  cat Dockerfile
+  386  vi Dockerfile
+  387  docker images
+  388  docker rmi 28f026cc47a1 82603bf45e83
+  389  docker images
+  390  docker rmi 8b0a7bce6abb a0b976f32c18 624fb61775c3
+  391  docker images
+  392  docker rmi -f cdf26cc71b50 624fb61775c3 fce289e99eb9
+  393  docker images
+  394  ls -lart
+  395  docker build -t simpleapp:v1 .
+  396  dokcer ps
+  397  docker ps
+  398  docker ps -a
+  399  docker run -d --name firstapp -p 8282:8080 simpleapp:v1
+  400  docker ps
+  401  docker ps -aq
+  402  docker logs follow 1b9140412f37
+  403  docker logs -f 1b9140412f37
+  404  dokcer ps
+  405  docker ps
+  406  docker stop 1b9140412f37
+  407  docker ps -aq
+  408  docker ps -q
+  409  dokcer ps -a
+  410  docker ps -a
+  411  docker rm -f 1b9140412f37
+  412  docker ps -a
+  413  cd ../
+  414  ls -lart
+  415  mkdir nodejsapp
+  416  ls -lart
+  417  cd Login_Docker/
+  418  ls -lart
+  419  cat Dockerfile
+  420  vi Dockerfile
+  421  dokcer build -t nodejsapp:v1 .
+  422  docker build -t nodejsapp:v1 .
+  423  sudo docker service start
+  424  sudo serive docker start
+  425  sudo service docker start
+  426  docker build -t nodejsapp:v1 .
+  427  vi Dockerfile
+  428  docker build -t nodejsapp:v1 .
+  429  docker images
+  430  dokcer ps
+  431  docker ps
+  432  docker ps -a
+  433  docker rm -f 6f3e7ad2b71a
+  434  docker ps -a
+  435  docker run -it --name firstnodejsapp -p 8282:8080 nodejsapp:v1
+  436  docker ps -a
+  437  docker rm -f d9fbc388d0c1
+  438  docker run -d --name firstnodejsapp -p 8282:8080 nodejsapp:v1
+  439  docker ps -1
+  440  docker ps
+  441  docker logs 6faaf42d5804
+  442  docker logs -f 6faaf42d5804
+  443  ls -lart
+  444  date
+  445  cd ..
+  446  ls -lart
+  447  cp Login_Docker Login_Docker_alpine
+  448  cp -r Login_Docker Login_Docker_alpine
+  449  ls -lart
+  450  cd Login_Docker_alpine
+  451  ls -lart
+  452  vi Dockerfile
+  453  docker images
+  454  docker build -t nodejsapp:v2 .
+  455  vi Dockerfile
+  456  docker build -t nodejsapp:v2 .
+  457  docker run -d --name secondnodejsapp -p 8081:8080 nodejsapp:v2
+  458  docker ps
+  459  docker images
+  460  cd ../
+  461  ls -lart
+  462  mkdir practise
+  463  ls -alrt
+  464  cd practise
+  465  ls -lart
+  466  vi Dockerfile
+  467  docker build -it test1 .
+  468  docker build -t test1 .
+  469  docker run -it test1
+  470  vi Dockerfile
+  471  docker build -t test1 .
+  472  docker run -it test1
+  473  vi Dockerfile
+  474  docker build -t test1 .
+  475  docker run -it test1
+  476  vi Dockerfile
+  477  docker build -t test1 .
+  478  docker run -it test1 /bin/bash
+  479  docker run -it test1 free
+  480  docker run -it test1
+  481  vi Dockerfile
+  482  docker build -t test1 .
+  483  docker run -it test1 free
+  484  docker run -it test1 --entrypoint free
+  485  docker run -it test1 --ENTRYPOINT free -m
+  486  vi Dockerfile
+  487  docker build -t test1 .
+  488  docker run -it test1
+  489  history
+[ec2-user@ip-172-31-44-48 practise]$
+ 490  docker ps
+  491  dokcer ps -a
+  492  docker ps -a
+  493  dokcer ps -aq
+  494  docker ps -aq
+  495  docker rm $(docker ps -aq)
+  496  dokcer ps
+  497  docker ps
+  498  docker stop a3744a65a50a 6faaf42d5804
+  499  docker ps
+  500  docker rm -f 6faaf42d5804 a3744a65a50a
+  501  docker ps -aq
+  502  docker images
+  503  docker rmi dba4205b9c81
+  504  docker images
+  505  docker images aad03e80dc02
+  506  docker rmi aad03e80dc02 ada76a11f0d2 4521c9fc8ff4 dc7a3ba47ad9 b094bfa73903
+  507  docker images
+  508  ls -lart
+  509  cd nodejsapp/
+  510  ls -lart
+  511  cd ../Login_Docker
+  512  ls -lart
+  513  cat Dockerfile
+  514  vi Dockerfile
+  515  docker images
+  516  sudo docker service status
+  517  sudo service docker statu
+  518  sudo service docker status
+  519  sudo service docker start
+  520  dokcer images
+  521  docker images
+  522  dokcer build -t nodejsapp:v3 .
+  523  docker build -t nodejsapp:v3 .
+  524  docker run -d --rm -name third -p 8282:8080 nodejsapp:v3
+  525  docker run -d --rm --name third -p 8282:8080 nodejsapp:v3
+  526  docker ps
+  527  docker ps -a
+  528  docker ps
+  529  docker stop e5f2e75d82bd
+  530  docker ps -a
+  531  dokcer ps
+  532  docker ps
+  533  docker ps -aq
+  534  dokcer ps -q
+  535  docker ps -q
+  536  docker ps -aq
+  537  docker ps
+  538  docker run -d --name fourth -p 8282:8080 nodejsapp:v3
+  539  docker ps
+  540  docker ps -a
+  541  docker stop a42c4f5f95b6
+  542  dokcer ps -a
+  543  docker ps -a
+  544  docker rm -f a42c4f5f95b6
+  545  docker ps -a
+  546  cat Dockerfile
+  547  ls
+  548  cd ../
+  549  ls -lart
+  550  mkdir ONBUILD
+  551  ls -lart
+  552  cd ONBUILD/
+  553  ls -lart
+  554  vi Dockerfile
+  555  ls -lart
+  556  docker build -t onbuild:v1 .
+  557  docker run -it onbuild:v1
+  558  cd ../
+  559  ls -lart
+  560  mkdir ONBUILD_Child
+  561  docker images
+  562  vi Dockerfile
+  563  docker build -t onbuild_child:v1 .
+  564  cd ../
+  565  ls -lart
+  566  cd ec2-user/
+  567  ls --lart
+  568  ls -lart
+  569  cd ONBUILD
+  570  ls -lart
+  571  vi Dockerfile
+  572  docker build -t onbuild:v2 .
+  573  docker run -it onbuild:v2
+  574  docker images
+  575  cd ../
+  576  cd ONBUILD_Child/
+  577  ls -lart
+  578  cd ../
+  579  ls -lart
+  580  mv Dockerfile /ec2-user/ONBUILD_Child
+  581  pwd
+  582  mv Dockerfile /home/ec2-user/ONBUILD_Child
+  583  cd ONBUILD_Child/
+  584  ls -lart
+  585  vi Dockerfile
+  586  ls -lart
+  587  dokcer build -t onbuild_child:v2 --no-cache=true .
+  588  docker build -t onbuild_child:v2 --no-cache=true .
+  589  docker run -it onbuild_child:v2
+  590  cd ../
+  591  ls -lart
+  592  cd ONBUILD
+  593  ls -lart
+  594  vi Dockerfile
+  595  docker build -t onbuild:v3 .
+  596  docker run -it onbuild:v3
+  597  cd ../ONBUILD_Child/
+  598  ls -lart
+  599  vi Dockerfile
+  600  docker images
+  601  docker build -t onbuild_child:v3 --no-cache=true .
+  602  docker run -it onbuild_child:v3
+  603  history
+
+
+  602  docker ps -aq
+  603  docker rm $(docker ps -aq)
+  604  docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  605  sudo service docker start
+  606  docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  607  docker ps
+  608  docker images
+  609  docker pull ubuntu
+  610  docker image tag ubuntu localhost:5000/my-ubuntu
+  611  docker images
+  612  docker ps
+  613  docker rm -f c07ae275550d
+  614  docker ps
+  615  docker image tag ubuntu:latest localhost:5000/my-ubuntu
+  616  docker images
+  617  docker image tag onbuild:v1 localhost:5000/onbuild:v1
+  618  docker images
+  619  docker push localhost:5000/my-ubuntu
+  620  docker push localhost:5000/onbuild
+  621  docker push localhost:5000/my-ubuntu
+  622  sudo service docker restart
+  623  docker push localhost:5000/onbuild
+  624  docker images | grep localhost
+  625  docker push localhost:5000/onbuild:v1
+  626  docker ps
+  627  dokcer run -d -p 5000:5000 --restart:always --name registry1 localhost:5000/onbuild:v1
+  628  docker run -d -p 5000:5000 --restart:always --name registry1 localhost:5000/onbuild:v1
+  629  docker run -d -p 5000:5000 --restart=always --name registry1 localhost:5000/onbuild:v1
+  630  docker push localhost:5000/onbuild:v1
+  631  docker ps
+  632  cd  /etc/default/
+  633  ls -lart
+  634  cd ../
+  635  ls -lart
+  636  cd docker
+  637  ls -lart
+  638  cat key.json
+  639  sudo cat key.json
+  640  cd etc/sysconfig/docker
+  641  cd ../sysconfig/
+  642  ls -lart
+  643  sudo vi /etc/sysconfig/docker
+  644  ls -lart
+  645  cd ../../
+  646  ls -lart
+  647  cd ../
+  648  cd /home/ec2-user/
+  649  ls -lart
+  650  docker images | grep localhost
+  651  docker push localhost:5000/onbuild:v1
+  652  Get http://localhost:5000/v2/
+  653  get Get http://localhost:5000/v2/
+  654  history
+  655  sudo service docker start
+  656  docker push localhost:5000/onbuild:v1
+  657  sudo service docker restart
+  658  sudo service docker status
+  659  docker push localhost:5000/onbuild:v1
+  660  docker push localhost:5000/onbuild
+  661  cd /etc/docker
+  662  ls -lart
+  663  sudo vi daemon.json
+  664  ls -lart
+  665  sudo service docker restart
+  666  sudo service docker service
+  667  sudo service docker status
+  668  pwd
+  669  cd ../../
+  670  ls -lart
+  671  cd /home/ec2-user/
+  672  ls -lart
+  673  docker images | grep localhost
+  674  docker push localhost:5000/onbuild:v1
+  675  docker login
+  676  cd .docker
+  677  ls -lart
+  678  cat config.json
+  679  docker rmi localhost:5000/onbuild localhost:5000/my-ubuntu
+  680  docker rmi localhost:5000/onbuild:v1 localhost:5000/my-ubuntu:latest
+  681  docker rmi localhost:5000/onbuild:v1
+  682  docker images
+  683  docker images | grep localhost
+  684  docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  685  docker tag onbuild:v1 localhost:5000/onbuild:v1
+  686  docker images
+  687  docker push localhost:5000/onbuild:v1
+  688  cd ../../
+  689  cd ec2-user
+  690  docker images
+  691  docker rmi c2b6502cfc1e
+  692  docker rmi -f c2b6502cfc1e
+  693  cd /etc/docker/
+  694  ls -lart
+  695  sudo vi daemon.json
+  696  rm -rf daemon.json
+  697  sudo -i
+  698  docker pull localhost:5000/onbuild:v1
+  699  docker tag tutum/hello-world localhost:5000/tutum/hello-world
+  700  ls -lart
+  701  cd ../
+  702  cd /home/ec2-user/
+  703  dokcer images
+  704  docker images
+  705  docker push localhost:5000/tutum/hello-world
+  706  docker tag tutum/hello-world:latest localhost:5000/tutum/hello-world:latest
+  707  docker push localhost:5000/tutum/hello-world:latest
+  708  exit
+  709  ls -lart
+  710  docker images
+  711  docker tag onbuild_child:v1 localhost:5000/onbuild_child:v1
+  712  dokcer images
+  713  docker images
+  714  docker push localhost:5000/onbuild_child:v1
+  715  dokcer tag registry:2 localhost:5000/registry:2
+  716  docker tag registry:2 localhost:5000/registry:2
+  717  docker push localhost:5000/registry:2
+  718  dokcer ps
+  719  docker ps
+  720  docker run -d -p 5000:5000 --restart=always --name first1 localhost:5000/onbuild_child:v1
+  721  docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  722  dokcer push localhost:5000/onbuild_child:v1
+  723  docker push localhost:5000/onbuild_child:v1
+  724  docker pull localhost:5000/onbuild:v1
+  725  dokcer ps
+  726  docker ps
+  727  docker ps -al
+  728  docker images
+  729  docker rmi -f localhost:5000/onbuild_child:v1
+  730  docker images
+  731  docker pull localhost:5000/onbuild_child:v1
+  732  docker images
+  733  docker push localhost:5000/tutum/hello-world
+  734  docker images
+  735  docker rmi localhost:5000/tutum/hello-world
+  736  docker images
+  737  docker pull localhost:5000/tutum/hello-world
+  738  docker images
+  739  docker rmi -f nodejsapp:v3
+  740  docker images
+  741  curl -X GET http://localhost:5000/v2/_catalog
+  742  curl -X GET http://localhost:5000/v2/my-ubuntu/tags/list
+  743  curl -X GET http://localhost:5000/v2/onbuild_child/tags/list
+  744  docker run -d \ -p 5000:5000 \ --restart=always \ --name registry \ -v /mnt/registry:/var/lib/registry \ registry:2
+  745  docker run -d -p 5000:5000 --restart=always --name registry -v /mnt/registry:/var/lib/registry registry:2
+  746  docker run -d -p 5000:5000 --restart=always --name registry3 -v /mnt/registry:/var/lib/registry registry:2
+  747  dokcer ps
+  748  docker ps
+  749  docker stop 506967b9c0ae
+  750  docker ps -al
+  751  docker rm 793d422f9e01
+  752  docker ps -al
+  753  docker rm -f 506967b9c0ae
+  754  docker ps -al
+  755  docker ps -a
+  756  docker run -d -p 5000:5000 --restart=always --name registry -v /mnt/registry:/var/lib/registry registry:2
+  757  docker inspect
+  758  docker inspect volumes
+  759  docker volumes inspect
+  760  docker inspect --help
+  761  ls -lart
+  762  cd mnt
+  763  cd /mnt
+  764  ls -lart
+  765  cd registry/
+  766  ls -lar
+  767  docker volumes -l
+  768  docker volumes -v
+  769  docker images
+  770  docker container stop registry
+  771  docker images
+  772  python -v
+  773  python --version
+  774  pip --version
+  775  sudo yum install pip
+  776  curl -O https://bootstrap.pypa.io/get-pip.py
+  777  python get-pip.py
+  778  pip --version
+  779  sudo pip install boto
+  780  pip install boto
+  781  pip install bot03
+  782  pip install boto3
+  783  docker --version
+  784  historu
+  785  history
+  786  clear
+  787  ls -lart
+  788  mkdir imp
+  789  cd imp/
+  790  pwd
+  791  cd ../
+  792  ls -lart
+  793  cd imp/
+  794  ls -lart
+  795  cd ../
+  796  ls -lart
+  797  cd imp/
+  798  free -m
+  799  docker ps
+  800  docker exec efeb978dd450 bash
+  801  ls -lart
+  802  docker pull wordpress
+  803  sudo docker service start
+  804  sudo service docker start
+  805  docker pull wordpress
+  806  docker pull mysql
+  807  dokcer images
+  808  docker images
+  809  docker run --name mysqlwp -d mysql
+  810  dokcer ps
+  811  docker ps
+  812  docker ps-al
+  813  docker ps -al
+  814  dokcer rm -f 890e72cc4196
+  815  docker rm -f 890e72cc4196
+  816  docker ps -al
+  817  docker run -d --name mysqlwp -e MYSQL_ROOT_PASSWORD=wordpressdocker mysql mysqld
+  818  docker ps -al
+  819  dokcer stop 1629c76e2738
+  820  docker stop 1629c76e2738
+  821  dokcer stop 1629c76e2738
+  822  docker ps -al
+  823  docker rm -f 1629c76e2738
+  824  docker run -d --name mysqlwp -e MYSQL_ROOT_PASSWORD=wordpressdocker mysql mysqld --default-authentication-plugin=mysql_native_password
+  825  docker ps -al
+  826  docker run  --name wordpress --link mysqlwp:mysql -p 80:80 -d wordpress
+  827  docker ps
+  828  ls -lart
+  829  cd imp/
+  830  ls -lart
+  831  git init
+  832  git --version
+  833  yum install git
+  834  sudo yum install update
+  835  sudo yum install update -y
+  836  sudo yum install git -y
+  837  git --version
+  838  git init
+  839  ls -lart
+  840  git add .
+  841  git statu
+  842  git status
+  843  git commit -m " tmp files "
+  844  git remote add origin https://github.com/suryathejaambati/tmp.git
+  845  git push origin master
+  846  cd ../
+  847  ls -lart
+  848  cd imp/
+  849  ls -lart
+  850  rm -rf imp
+  851  rm -rf Imp
+  852  ls -lart
+  853  cd ../
+  854  ls -lart
+  855  cd Link/
+  856  ls -lart
+  857  chmod 755
+  858  chmod 755 *
+  859  ls -lart
+  860  vi Dockerfile
+  861  vi dbConnectionProperties.properties
+  862  docker pull postgres
+  863  sudo docker service start
+  864  sudo service docker start
+  865  docker pull postgres
+  866  history
+  867  docker images
+  868  docker run -d --name mypostgres -e POSTGRES_PASSWORD=madhupost -d -p 5432:5432 postgres
+  869  docker ps
+  870  cd Link/
+  871  ls -lart
+  872  docker build -t dbconnection .
+  873  docker run  --name dbconnection1 --link mypostgres:postgres -p 5432:5432 -d dbconnection
+  874  docker run  --name dbconnection1 --link mypostgres:postgres -p 80:80 -d dbconnection
+  875  dokcer images
+  876  docker images
+  877  docker ps
+  878  docker ps -a
+  879  docker rm -f a20467b605b0 efeb978dd450 5e31f5960f5c a68dc06f02c2
+  880  docker run  --name dbconnection1 --link mypostgres:postgres -p 80:80 -d dbconnection
+  881  docker stop 70240e7beaa5
+  882  docker ps -a
+  883  docker stop 70240e7beaa5
+  884  docker ps -al
+  885  docker stop 70240e7beaa5
+  886  docker rm -f 70240e7beaa5
+  887  dokcer ps
+  888  docker ps
+  889  docker run  --name dbconnection1 --link mypostgres:postgres -p 80:80 -d dbconnection
+  890  sudo docker service start
+  891  sudo service docker start
+  892  docker ps
+  893  dokcer ps -al
+  894  docker ps -al
+  895  docker rm -f 6b3abedb4e2c
+  896  docker ps -al
+  897  docker rm -f b614364afc76
+  898  docker ps -al
+  899  docker ps -a
+  900  docker ps
+  901  dokcer ps =aq
+  902  dokcer ps -aq
+  903  docker ps -aq
+  904  docker images
+  905  docker run -d --name mypostgress -e POSTGRES_PASSWORD=madhupost -p 5432:5432 postgres
+  906  ls -lart
+  907  cd Javaapp
+  908  ls -lart
+  909  cd ../
+  910  cd practise/
+  911  ls -lart
+  912  cat Dockerfile
+  913  cd ../
+  914  history
+  915  cd Link/
+  916  ls -lart
+  917  vi dbConnectionProperties.properties
+  918  docker images
+  919  dokcer run -d --name dbconnection1 -p 80:9998 dbconnection
+  920  docker run -d --name dbconnection1 -p 80:9998 dbconnection
+  921  ls -lart
+  922  mkdir composetest
+  923  ls -lart
+  924  cd composetest/
+  925  ls -lart
+  926  vi app.py
+  927  vi requirements.txt
+  928  vi Dockerfile
+  929  vi ocker-compose.yml
+  930  ls -lart
+  931  mv ocker-compose.yml docker-compose.yml
+  932  ls -lart
+  933  docker-compose up
+  934  sudo service docker start
+  935  docker-compose up
+  936  docker login
+  937  docker-compose up
+  938  ls -lart
+  939  vi docker-compose.yml
+  940  docker-compose up
+  941  docker ps
+  942  docker ps -aq
+  943  docker rm $(docker ps -aq)
+  944  docker ps -aq
+  945  docker ps -q
+  946  docker images
+  947  docker rmi 4cdbec704e47
+  948  docker ps
+  949  ls -lart
+  950  vi Dockerfile
+  951  vi docker-compose.yml
+  952  docker-compose up
+  953  free -m
+  954  docker images
+  955  docker rmi e2c77e38d57d 0d205d4886fe 9907cacf0c01 9228ee8bac7a
+  956  free -m
+  957  dockerps -qa
+  958  docker ps -aq
+  959  docker rm $(docker ps -aq)
+  960  docker ps -aq
+  961  docker ps -q
+  962  exit
+  963  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  964  dokcer-compose --v
+  965  docker-compose --version
+  966  docker --version
+  967  docker images ls
+  968  sudo service docker start
+  969  docker image ls
+  970  cd composetest/
+  971  ls -lart
+  972  vi app.py
+  973  docker-compose -d
+  974  docker-compose up -d
+  975  docker-compose pd
+  976  docker-compose ps
+  977  docker-compose run web
+  978  docker-compose stop
+  979  docker-compose down --volumes
+  980  docker images
+  981  docker ps -aq
+  982  docker ps -qq
+  983  docker ps -q
+  984  sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  985  ls -lart
+  986  sudo chmod +x /usr/local/bin/docker-compose
+  987  ls -lart
+  988  cd composetest/
+  989  ls -lart
+  990  sudo service docker start
+  991  docker-compose up
+  992  docker ps -aq
+  993  docker rm $(docker ps -aq)
+  994  vi docker-compose.yml
+  995  cat docker-compose.yml
+  996  docker ps
+  997  docker-compose up
+  998  vi docker-compose.yml
+  999  docker-compose up
+ 1000  sudo docker service statrt
+ 1001  sudo docker service start
+ 1002  sudo service docker start
+ 1003  ifconfig
+ 1004  docker network ls
+ 1005  docker network inspect bridge
+ 1006  docker network inspect none
+ 1007  docker network inspect host
+ 1008  brctl show
+ 1009   docker images
+ 1010  dokcer run -it --name myubuntu1 ubuntu
+ 1011  docker run -it --name myubuntu1 ubuntu
+ 1012  ifconfig
+ 1013  brctl show
+ 1014  docker network inspect bridge
+ 1015  docker ps
+ 1016  docker exec a92c4f84b4bc bash
+ 1017  docker run -it --name myubuntu2 ubuntu
+ 1018  ifconfig
+ 1019  brctl show
+ 1020  docker network create mynetwork --subnet=10.0.0.0/16 --gateway=10.0.0.1
+ 1021  docker network ls
+ 1022  docker network inspect mynetwork
+ 1023  brctl show
+ 1024  docker run -it --net mynetwork --name myubuntu3 ubuntu
+ 1025  ifconfig
+ 1026  brctl show
+ 1027  docker ps
+ 1028  docker network connect bridge myubuntu3
+ 1029  docker exec -it 237f5e38e669 bash
+ 1030  docker run -it --name myubuntu4 ubuntu
+ 1031  dokcer ps
+ 1032  docker ps
+ 1033  brctl show
+ 1034  dokcer run -it --net mynetwork --name myubuntu5 ubuntu
+ 1035  docker run -it --net mynetwork --name myubuntu5 ubuntu
+ 1036  docker ps
+ 1037  docker exec -it 237f5e38e669 bash
+ 1038  history
+
+brctl show
+  949  docker images
+  950  docker ps -aq
+  951  docker rm -f $(docker ps -aq)
+  952  docker ps -aq
+  953  docker ps -a
+  954  docker ps -al
+  955  ls -lart
+  956  ifconfig
+  957  sudo docker service start
+  958  sudo service docker start
+  959  ifconfig
+  960  docker ps
+  961  docker ps -al
+  962  docker ps -aq
+  963  docker ps -q
+  964  docker images
+  965  ls -lart
+  966  mkdir JenkinsApp
+  967  ls -lart
+  968  cd J
+  969  cd JenkinsApp/
+  970  ls -lart
+  971  vi Dockerfil
+  972  ls -lart
+  973  vi Dockerfile
+  974  sudo docker service start
+  975  sudo service docker start
+  976  docker build -t myjenkins .
+  977  vi Dockerfile
+  978  docker build -t myjenkins .
+  979  sudo mkdir -p /var/jenkins_home
+  980  cd /var/jenkins_home/
+  981  sudo chown -R 1000 /var/jenkins_home
+  982  sudo docker run -d --restart=always -u root -p 8082:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -name jenkins myjenkins
+  983  cd /home/ec2-user/
+  984  ls -lart
+  985  cd JenkinsApp/
+  986  sudo docker run -d --restart=always -u root -p 8082:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -name jenkins myjenkins
+  987  sudo docker run -d --restart=always -u root -p 8082:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -n jenkins myjenkins
+  988  sudo docker run -d --restart=always -u root -p 8082:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins myjenkins
+  989  docker ps
+  990  sudo cat /var/jenkins_home/secrets/initialAdminPassword
+  991  docker ps
+  992  docker images
+  993  docker ps
+  994  docker stop 7d91d94e505e 4bbd07978d95
+  995  docker ps -aq
+  996  docker rm -f $(docker ps -aq)
+  997  docker images
+  998  docker ps
+  999  docker exec -it 4bbd07978d95 bash
+ 1000  sudo service docker start
+ 1001  history
+
+
+
+
+

@@ -1,0 +1,63 @@
+
+docker -v
+docker version
+docker info
+docker images
+docker ps
+docker serach "image word"
+docker pull <imagename>
+docker run -it <imagename>
+docker run -d --name myname <imagename>
+docker ps
+dokcer ps -a
+docker ps | grep myclock
+docker ps -al
+docker ps -q
+docker ps -aq
+docker commit -m "my figlet ubuntu" 457807cfa86c myfigletubuntu
+docker rm 3f032858b437
+docker stop 3f032858b437
+docker rm -f 21daa67d6b28 457807cfa86c
+docker start 41fd6f0bf48c
+docker logs f64ddc0d4767
+docker logs -f f64ddc0d4767
+docker logs -f --tail 1  f64ddc0d4767
+docker exec -it containerid bash
+
+docker push imagename
+docker login
+docker push ybmsr1/myfigletubuntu
+docker tag myfigletubuntu ybmsr1/myfigletubuntu:v1
+docker run -d -p 80 --name web tutum/hello-world
+docker run -d -p 8181:80 --name pradeep tutum/hello-world
+docker run -d -p 80:80 --name surya tutum/hello-world
+
+
+486  docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  487  dokcer ps
+  488  docker ps
+  489  docker rm -f b74cd53d7eaf
+  490  docker ps -a
+  491  docker ps -al
+  492  docker rm c8
+  493  docker run -d -p 5000:5000 --restart=always --name registry registry:2
+  494  docker ps -al
+  495  docker pull ubuntu
+  496  docker images
+  497  docker tag childapp:v1 localhost:5000/childapp:v1
+  498  docker images | grep localhost
+  499  docker push localhost:5000/childapp:v1
+  500  docker images | grep localhost
+  501  docker rmi d094ab01164d
+  502  docker rmi -f  d094ab01164d
+  503  docker images | grep localhost
+  504  docker pull localhost:5000/childapp:v1
+  505  docker images | grep localhost
+  506  docker ps
+  507  docker rm -f e3ffe9762a58
+  508  docker ps
+  509  docker run -d   -p 5000:5000   --restart=always   --name registry   -v /mnt/registry:/var/lib/registry   registry:2
+  510  docker ps
+  511  docker push localhost:5000/childapp:v1
+  512  docker push localhost:5000/childapp:v2
+  513  

@@ -1,0 +1,151 @@
+ 1  cd /home/ansadmin/
+    2  ls -lart
+    3  cd nonprod/
+    4  ls -lart
+    5  vi print_any_msg.yml
+    6  ansible-playbook print_any_msg.yml --syntax-check
+    7  ansible-playbook print_any_msg.yml
+    8  vi print_any_msg.yml
+    9  ansible-playbook print_any_msg.yml
+   10  vi print_any_msg.yml
+   11  ansible-playbook print_any_msg.yml
+   12  vi print_any_msg.yml
+   13  ansible-playbook print_any_msg.yml
+   14  vi print_any_msg.yml
+   15  ansible-playbook print_any_msg.yml
+   16  vi print_any_msg_1.yml
+   17  ansible-playbook print_any_msg_1.yml --syntax-check
+   18  ansible-playbook print_any_msg_1.yml
+   19  vi print_any_msg_1.yml
+   20  vi print_variable.yaml
+   21  ansible-playbook print_variable.yaml
+   22  vi print_variable.yaml
+   23  ansible-playbook print_variable.yaml --syntax-check
+   24  vi print_variable.yaml
+   25  ls -lart
+   26  ansible-playbook print_variable.yaml --syntax-check
+   27  vi print_variable.yaml
+   28  ansible-playbook print_variable.yaml --syntax-check
+   29  vi print_variable.yaml
+   30  ansible-playbook print_variable.yaml
+   31  ansible-playbook print_variable.yaml -i inventory
+   32  vi print_variable.yaml
+   33  ansible-playbook -i inventory print_variable.yaml
+   34  vi print_variable.yaml
+   35  ansible-playbook -i inventory print_variable.yaml
+   36  ansible-playbook print_variable.yaml
+   37  vi print_variable.yaml
+   38  ansible-playbook print_variable.yaml
+   39  vi print_variable.yaml
+   40  vi print_variable_1.yaml
+   41  ansible-playbook print_variable_1.yaml
+   42  vi print_verbosity.yaml
+   43  ansible-playbook print_verbosity.yaml
+   44  vi print_verbosity.yaml
+   45  ansible-playbook print_verbosity.yaml
+   46  vi print_verbosity.yaml
+   47  ansible-playbook print_verbosity.yaml
+   48  vi print_verbosity.yaml
+   49  ansible-playbook print_verbosity.yaml
+   50  cd /home/ansadmin/
+   51  cd nonprod/
+   52  ls -lart
+   53  cat print_verbosity.yaml
+   54  vi print_verbosity.yaml
+   55  ansible-playbook print_verbosity.yaml
+   56  vi print_verbosity.yaml
+   57  ansible-playbook print_verbosity.yaml
+   58  vi print_verbosity.yaml
+   59  ansible-playbook print_verbosity.yaml
+   60  vi print_input_output.yaml
+   61  ansible-playbook print_input_output.yaml --syntax-check
+   62  ansible-playbook print_input_output.yaml
+   63  vi print_input_output_prompt.yaml
+   64  ansible-playbook print_input_output_prompt.yaml
+   65  vi print_input_output_prompt.yaml
+   66  ansible-playbook print_input_output_prompt.yaml
+   67  ansible-playbook print_input_output_prompt_1.yaml
+   68  vi print_input_output_prompt_1.yaml
+   69  ansible-playbook print_input_output_prompt_1.yaml
+   70  vi print_input_output_prompt_1.yaml
+   71  ansible-playbook print_input_output_prompt_1.yaml
+   72  vi print_input_output_prompt_1.yaml
+   73  ansible-playbook print_input_output_prompt_1.yaml
+   74  vi print_input_output_prompt_1.yaml
+   75  ansible-playbook print_input_output_prompt_1.yaml
+   76  vi print_input_output_prompt_1.yaml
+   77  ansible-playbook print_input_output_prompt_1.yaml
+   78  vi print_input_output_prompt_1.yaml
+   79  ansible-playbook print_input_output_prompt_1.yaml
+   80  vi print_input_output_prompt_1.yaml
+   81  ansible-playbook print_input_output_prompt_1.yaml
+   82  vi print_input_output_prompt_1.yaml
+   83  ansible-playbook print_input_output_prompt_1.yaml
+   84  vi print_input_output_prompt.yaml
+   85  vi print_input_output_prompt_1.yaml
+   86  ansible-playbook print_input_output_prompt_1.yaml
+   87  vi print_input_output_prompt_1.yaml
+   88  ansible-playbook print_input_output_prompt_1.yaml
+   89  vi print_input_output_prompt_1.yaml
+   90  ansible-playbook print_input_output_prompt_1.yaml
+   91  vi print_input_output_prompt_1.yaml
+   92  ansible-playbook print_input_output_prompt_1.yaml
+   93  vi print_input_output_prompt_1.yaml
+   94  ansible-playbook print_input_output_prompt_1.yaml
+   95  vi print_input_output_prompt_1.yaml
+   96  vi print_input_output_prompt.yaml
+   97  vi print_input_output_prompt_1.yaml
+   98  ansible-playbook print_input_output_prompt_1.yaml
+   99  vi print_input_output_prompt_1.yaml
+  100  ansible-playbook print_input_output_prompt_1.yaml
+  101  ansible-playbook print_input_output_prompt_1.yaml
+  102  ls -lart
+  103  vi command_line_args.yaml
+  104  ansible-playbook command_line_args.yaml
+  105  vi command_line_args.yaml
+  106  ansible-playbook command_line_args.yaml --extra-var x=99
+  107  ansible-playbook command_line_args.yaml --extra-var "x=99"
+  108  ansible-playbook command_line_args.yaml --e "{'x':99}"
+  109  vi command_line_args.yaml
+  110  ansible-playbook command_line_args.yaml --e "{'x':99}"
+  111  vi command_line_args_1.yaml
+  112  ansible-playbook command_line_args_1.yaml --e "x=67 y=89"
+  113  vi command_line_args_1.yaml
+  114  ansible-playbook command_line_args_1.yaml --e "x=67 y=89"
+  115  ansible-playbook command_line_args_1.yaml --e "x=67 y=ansibleplaybooks"
+  116  ansible-playbook command_line_args_1.yaml --e "x=67 y=ansible_playbooks"
+  117  ansible-playbook command_line_args_1.yaml --e "x=67 y=ansible playbooks"
+  118  ansible-playbook command_line_args_1.yaml --e "x=67 y='ansible_playbooks'"
+  119  ansible-playbook command_line_args_1.yaml --e "{'x'=34, 'y'=76}"
+  120  ansible-playbook command_line_args_1.yaml --e "{'x':34, 'y':76}"
+  121  ansible-playbook command_line_args.yaml --e "{'x': [ 3 4 5 6 ]}"
+  122  cat command_line_args.yaml
+  123  vi values.yaml
+  124  ansible-playbook command_line_args_1.yaml --e "values.yaml"
+  125  ansible-playbook command_line_args_1.yaml --e "@values.yaml"
+  126  vi install_uninstall_pkg.yaml
+  127  cd /home/ansadmin/
+  128  ls -lart
+  129  cd nonprod
+  130  date
+  131  history
+  132  ansible
+  133  cd /home/ansadmin/
+  134  ls -lart
+  135  cd nonprod/
+  136  ls -lart
+  137  history
+  138  ansible-playbook install_uninstall_pkg.yaml -e "pkg=nginx req_state=present"
+  139  vi install_uninstall_pkg.yaml
+  140  ansible-playbook install_uninstall_pkg.yaml -e "pkg=nginx req_state=present"
+  141  ansible-playbook install_uninstall_pkg.yaml --e "pkg=nginx req_state=present"
+  142  ansible-playbook install_uninstall_pkg.yaml --e "pkg=httpd req_state=present"
+  143  httpd --version
+  144  ansible-playbook install_uninstall_pkg.yaml --e "pkg=httpd req_state=absent"
+  145  git l--version
+  146  git --version
+  147  ansible-playbook install_uninstall_pkg.yaml --e "pkg=git req_state=present"
+  148  git --version
+  149  ansible-playbook install_uninstall_pkg.yaml --e "pkg=git req_state=absent"
+  150  git --version
+  151  history
